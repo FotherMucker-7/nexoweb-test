@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Permitir rastreadores de IA para GEO/AEO
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://nexoweb.cl/sitemap.xml

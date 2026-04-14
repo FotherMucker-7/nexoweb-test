@@ -1,0 +1,17 @@
+# NexoWeb - Agencia de Desarrollo Web Premium
+
+NexoWeb es una agencia boutique de desarrollo web que se especializa en crear activo digitales propios. Rechazamos el uso de plantillas genéricas a favor de código a medida, limpio y de alto rendimiento.
+
+## Servicios
+- Desarrollo Web a medida (React, Vite, HTML5).
+- E-commerce integral con enfoque en conversión.
+- Optimización de Velocidad y Accesibilidad (WCAG AA).
+- Automatizaciones y Consultoría Digital.
+
+## Filosofía
+El control pertenece al cliente. No creemos en "terrenos arrendados". Nuestro código es transparente, accesible y preparado para ser citado por motores de respuesta (AEO).
+
+## Datos de Contacto
+- Web: https://nexoweb.cl
+- Email: contacto@nexoweb.cl
+- Localización: Santiago de Chile.
