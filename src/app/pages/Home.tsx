@@ -3,6 +3,7 @@ import { ArrowRight, Code, Sparkles, Zap, AlertTriangle } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { FaqAccordion } from "../components/ui/FaqAccordion";
 import { SEO } from "../components/SEO";
+import heroImg from "../../assets/hero-finalb.webp";
 
 const AWARENESS_ITEMS = [
   { label: "Webs genéricas", bad: true, detail: "Mismo molde para todos. Nadie te recuerda." },
@@ -108,7 +109,7 @@ export function Home() {
             <div className="relative group">
               <div className="relative border-8 border-foreground overflow-hidden bg-white dark:bg-card shadow-[16px_16px_0px_0px_var(--color-magenta)] aspect-square md:aspect-[4/5]">
                 <ImageWithFallback
-                  src="src/assets/hero-finalb.webp"
+                  src={heroImg}
                   alt="Espacio de trabajo moderno - NexoWeb"
                   className="w-full h-full object-cover object-bottom drop-shadow-[12px_12px_0px_rgba(0,0,0,0.15)] transition-transform duration-500 group-hover:scale-105"
                 />

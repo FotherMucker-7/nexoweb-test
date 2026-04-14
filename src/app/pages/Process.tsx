@@ -3,12 +3,17 @@ import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { FaqAccordion } from "../components/ui/FaqAccordion";
 import { SEO } from "../components/SEO";
+import step1 from "../../assets/1.webp";
+import step2 from "../../assets/2.webp";
+import step3 from "../../assets/3.webp";
+import step4 from "../../assets/4.webp";
+import step5 from "../../assets/5.webp";
 
 const PROCESS_STEPS = [
   {
     number: "01",
     icon: MessageCircle,
-    image: "src/assets/1.webp",
+    image: step1,
     title: "La charla inicial.",
     description:
       "Nos sentamos a conversar. No necesitas saber de código. Queremos entender qué vendes, quiénes son tus clientes y qué metas tienes en mente.",
@@ -22,7 +27,7 @@ const PROCESS_STEPS = [
   {
     number: "02",
     icon: Map,
-    image: "src/assets/2.webp",
+    image: step2,
     title: "Dibujamos el mapa.",
     description:
       "Antes de programar, diseñamos el flujo. Decidimos dónde van los botones y qué decir para que tus clientes confíen en ti y se decidan pronto.",
@@ -36,7 +41,7 @@ const PROCESS_STEPS = [
   {
     number: "03",
     icon: Hammer,
-    image: "src/assets/3.webp",
+    image: step3,
     title: "Manos a la obra.",
     description:
       "Aquí es donde levantamos la estructura. Usamos herramientas modernas para ir rápido, pero revisamos cada detalle para que todo sea seguro y vuele en cualquier celular.",
@@ -50,7 +55,7 @@ const PROCESS_STEPS = [
   {
     number: "04",
     icon: Rocket,
-    image: "src/assets/4.webp",
+    image: step4,
     title: "Revisión y estreno.",
     description:
       "Probamos que todo cargue al segundo. Cuando nos das el \"visto bueno\", encendemos los motores y tu web queda viviendo en su propio terreno.",
@@ -64,7 +69,7 @@ const PROCESS_STEPS = [
   {
     number: "05",
     icon: LifeBuoy,
-    image: "src/assets/5.webp",
+    image: step5,
     title: "Apoyo continuo.",
     description:
       "No te soltamos la mano tras el lanzamiento. Tu web nace preparada para crecer. Si mañana necesitas vender online o automatizar algo, los cimientos están listos.",

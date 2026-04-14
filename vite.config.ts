@@ -10,7 +10,6 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/nexoweb-test/',
   resolve: {
     alias: {
       // Alias @ to the src directory

@@ -14,7 +14,7 @@ const NAV_ITEMS = [
 ];
 
 export function Header() {
-  const { theme, setTheme } = useTheme();
+  const { theme, resolvedTheme, setTheme } = useTheme();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -67,11 +67,11 @@ export function Header() {
           <div className="flex items-center gap-2">
             <motion.button
               whileTap={{ scale: 0.95, x: 1, y: 1 }}
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
               className="p-2 border-2 border-foreground hover:bg-[var(--color-lime)] hover:text-black transition-colors"
               aria-label="Toggle theme"
             >
-              {theme === "dark" ? (
+              {resolvedTheme === "dark" ? (
                 <Sun className="w-5 h-5" />
               ) : (
                 <Moon className="w-5 h-5" />

@@ -6,7 +6,9 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy:staging": "npm run build && firebase hosting:channel:deploy staging",
+    "deploy": "npm run build && firebase deploy --only hosting"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",

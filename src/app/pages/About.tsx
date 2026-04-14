@@ -3,6 +3,7 @@ import { KeyRound, Users, Code2, Zap, ShieldCheck, Search, MonitorSmartphone, Ar
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { FaqAccordion } from "../components/ui/FaqAccordion";
 import { SEO } from "../components/SEO";
+import manifestImg from "../../assets/about-manifestob.webp";
 
 const MANIFESTO_ITEMS = [
   {
@@ -117,7 +118,7 @@ export function About() {
           <div className="relative group">
             <div className="border-8 border-foreground overflow-hidden bg-white dark:bg-card shadow-[12px_12px_0px_0px_var(--color-electric)] aspect-[4/5]">
               <ImageWithFallback
-                src="src/assets/about-manifestob.webp"
+                src={manifestImg}
                 alt="Equipo NexoWeb trabajando"
                 className="w-full h-full object-cover dark:brightness-90 drop-shadow-[12px_12px_0px_rgba(0,0,0,0.15)] transition-transform duration-500 group-hover:scale-105"
               />
