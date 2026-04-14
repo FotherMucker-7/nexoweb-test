@@ -1,5 +1,6 @@
 import { Link } from "react-router";
-import { ArrowRight, Code, Sparkles, Zap, AlertTriangle } from "lucide-react";
+import { ArrowRight, Code, AlertTriangle, CheckCircle2 } from "lucide-react";
+import { blogPosts } from "../data/blogData";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { FaqAccordion } from "../components/ui/FaqAccordion";
 import { SEO } from "../components/SEO";
@@ -11,26 +12,6 @@ const AWARENESS_ITEMS = [
   { label: "Tu espacio propio", bad: false, detail: "Tuya de verdad. Sin intermediarios. Sin sorpresas." },
 ];
 
-const SERVICES_ITEMS = [
-  {
-    icon: Code,
-    title: "Desarrollo Web",
-    description: "Sitios y aplicaciones hechos a medida pensando en cómo compran tus clientes reales. Sin copias.",
-    color: "var(--color-magenta)",
-  },
-  {
-    icon: Sparkles,
-    title: "Marketing Digital",
-    description: "Estrategias concretas para que tu web sea el motor de crecimiento, no solo una tarjeta virtual.",
-    color: "var(--color-cyan)",
-  },
-  {
-    icon: Zap,
-    title: "Automatizaciones",
-    description: "Herramientas que trabajan mientras duermes. Ahorra tiempo sin perder el trato humano.",
-    color: "var(--color-lime)",
-  },
-];
 
 const FAQ_ITEMS = [
   {
@@ -169,33 +150,90 @@ export function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Featured Service Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-6xl font-black mb-16 text-center">
             LO QUE <span className="text-[var(--color-electric)]">HACEMOS</span>
           </h2>
 
+          <div className="grid lg:grid-cols-2 gap-12 items-center bg-background border-4 border-foreground shadow-[12px_12px_0px_var(--color-magenta)] p-8 md:p-16">
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-cyan)] border-2 border-foreground font-black uppercase text-sm">
+                <Code className="w-4 h-4" /> Desarrollo Web a Medida
+              </div>
+              <h3 className="text-3xl md:text-5xl font-black leading-tight">
+                Construimos la base digital <br/> de tu negocio.
+              </h3>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                No vendemos plantillas que se rompen al mes ni sistemas que te obligan a pagar soporte para cambiar una foto. Creamos plataformas sólidas, rápidas y fáciles de usar, pensadas para que tú tengas el control total y tus clientes compren sin interrupciones.
+              </p>
+            </div>
+            
+            <div className="space-y-4">
+              {[
+                "Webs que cargan al instante",
+                "Fáciles de actualizar por ti mismo",
+                "Preparadas para aparecer en buscadores",
+                "Diseño único que nadie más tiene",
+                "Listas para conectarse a Inteligencia Artificial"
+              ].map((point, index) => (
+                <div key={index} className="flex items-center gap-4 p-4 border-4 border-foreground bg-accent hover:bg-[var(--color-lime)] transition-colors">
+                  <CheckCircle2 className="w-6 h-6 shrink-0" />
+                  <span className="font-bold text-lg leading-tight w-full">{point}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NexoInsights Section */}
+      <section className="py-20 bg-muted border-t-8 border-foreground">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div>
+              <h2 className="text-4xl md:text-6xl font-black">
+                NEXO<span className="text-[var(--color-orange)] underline decoration-8 underline-offset-8">INSIGHTS</span>
+              </h2>
+              <p className="text-xl text-muted-foreground mt-4 font-medium uppercase tracking-wider">
+                Conocimiento y visión desde las trincheras.
+              </p>
+            </div>
+            <Link 
+              to="/blog"
+              className="inline-flex items-center gap-2 group font-black uppercase text-lg hover:text-[var(--color-electric)] transition-colors"
+            >
+              Ver todos los recursos <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8">
-            {SERVICES_ITEMS.map((service, index) => (
-              <div
-                key={index}
-                className="group relative bg-background border-4 border-foreground p-8 hover:translate-y-[-4px] transition-transform"
-              >
-                <div
-                  className="absolute top-0 left-0 w-full h-2"
-                  style={{ backgroundColor: service.color }}
-                ></div>
-
-                <service.icon className="w-12 h-12 mb-6" />
-
-                <h3 className="text-2xl font-black mb-4 uppercase">
-                  {service.title}
-                </h3>
-
-                <p className="text-muted-foreground">
-                  {service.description}
-                </p>
+            {[...blogPosts].sort(() => 0.5 - Math.random()).slice(0, 3).map((post) => (
+              <div key={post.slug} className="group relative bg-card border-4 border-foreground shadow-[8px_8px_0px_var(--shadow-solid)] hover:shadow-[12px_12px_0px_var(--color-cyan)] transition-all flex flex-col h-full">
+                <div className="aspect-video bg-muted border-b-4 border-foreground overflow-hidden shrink-0">
+                  <img 
+                    src={post.heroImage} 
+                    alt={post.title} 
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-1 gap-4">
+                  <h3 className="text-xl font-black uppercase leading-tight group-hover:text-[var(--color-orange)] transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-muted-foreground line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  <div className="mt-auto pt-4">
+                    <Link 
+                      to={`/blog/${post.slug}`}
+                      className="inline-flex items-center gap-2 font-black uppercase underline decoration-2 underline-offset-4 hover:text-[var(--color-magenta)] transition-colors"
+                    >
+                      Leer más <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
