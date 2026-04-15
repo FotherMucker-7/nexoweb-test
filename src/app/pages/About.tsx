@@ -3,7 +3,7 @@ import { KeyRound, Users, Code2, Zap, ShieldCheck, Search, MonitorSmartphone, Ar
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { FaqAccordion } from "../components/ui/FaqAccordion";
 import { SEO } from "../components/SEO";
-import manifestImg from "../../assets/about-manifestob.webp";
+import manifestImg from "../../assets/about-manifesto.webp";
 
 const MANIFESTO_ITEMS = [
   {

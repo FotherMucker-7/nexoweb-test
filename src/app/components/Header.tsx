@@ -32,7 +32,7 @@ export function Header() {
             <img 
               src={logoImg} 
               alt="Logo" 
-              className="w-8 h-8 object-contain transition-transform group-hover:scale-110" 
+              className="w-12 h-12 object-contain transition-transform group-hover:scale-110 group-hover:rotate-5" 
             />
             <div className="text-3xl font-black tracking-tight hidden sm:block">
               <span className="relative">
@@ -68,7 +68,7 @@ export function Header() {
             <motion.button
               whileTap={{ scale: 0.95, x: 1, y: 1 }}
               onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-              className="p-2 border-2 border-foreground hover:bg-[var(--color-lime)] hover:text-black transition-colors"
+              className="p-2 border-2 border-foreground hover:bg-[var(--color-lime)] hover:text-black hover:rotate-5 transition-colors"
               aria-label="Toggle theme"
             >
               {resolvedTheme === "dark" ? (

@@ -166,17 +166,16 @@ export function Home() {
                 Construimos la base digital <br/> de tu negocio.
               </h3>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                No vendemos plantillas que se rompen al mes ni sistemas que te obligan a pagar soporte para cambiar una foto. Creamos plataformas sólidas, rápidas y fáciles de usar, pensadas para que tú tengas el control total y tus clientes compren sin interrupciones.
+                No vendemos plantillas que se rompen al mes ni sistemas que te obligan a pagar soporte para cambiar una foto. Creamos plataformas sólidas, rápidas y fáciles de usar, pensadas para que tú tengas el control total y tus clientes te conozcan sin interrupciones.
               </p>
             </div>
             
             <div className="space-y-4">
               {[
                 "Webs que cargan al instante",
-                "Fáciles de actualizar por ti mismo",
-                "Preparadas para aparecer en buscadores",
-                "Diseño único que nadie más tiene",
-                "Listas para conectarse a Inteligencia Artificial"
+                "Accesibles para todos los usuarios",                
+                "Diseño único basado en tu identidad",
+                "Adaptadas para todos los dispositivos"
               ].map((point, index) => (
                 <div key={index} className="flex items-center gap-4 p-4 border-4 border-foreground bg-accent hover:bg-[var(--color-lime)] transition-colors">
                   <CheckCircle2 className="w-6 h-6 shrink-0" />
@@ -197,7 +196,7 @@ export function Home() {
                 NEXO<span className="text-[var(--color-orange)] underline decoration-8 underline-offset-8">INSIGHTS</span>
               </h2>
               <p className="text-xl text-muted-foreground mt-4 font-medium uppercase tracking-wider">
-                Conocimiento y visión desde las trincheras.
+                Conocimiento y visión para tu experiencia digital.
               </p>
             </div>
             <Link 
