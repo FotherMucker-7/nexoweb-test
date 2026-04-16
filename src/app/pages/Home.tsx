@@ -65,7 +65,7 @@ export function Home() {
               </h1>
 
               <p className="text-xl text-muted-foreground max-w-lg">
-                Tu negocio no puede depender 100% de lo que Instagram decida hoy. Creamos tu <strong>casa propia en internet</strong>: una web que es tuya, que carga al instante y que te permite controlar tus clientes sin intermediarios.
+                Tu negocio no puede depender 100% de lo que las redes sociales decidan hoy. Creamos tu <strong>casa propia en internet</strong>: una web que es tuya, que carga al instante y que te permite tener el control de tus clientes sin intermediarios.
               </p>
 
               <div className="flex flex-wrap gap-4">
