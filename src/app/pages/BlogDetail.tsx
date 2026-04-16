@@ -93,7 +93,7 @@ export const BlogDetail = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          <h1 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tightest leading-none mb-6">
+          <h1 className="text-4xl md:text-4xl font-display font-black uppercase tracking-tightest leading-none mb-6">
             {post.title}
           </h1>
           <p className="text-xl md:text-2xl font-sans opacity-70 italic border-l-4 border-color-magenta pl-6">

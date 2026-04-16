@@ -7,7 +7,7 @@ export const BlogIndex = () => {
   return (
     <div className="container mx-auto px-6 py-20">
       <header className="mb-20 text-center max-w-4xl mx-auto">
-        <h1 className="text-6xl md:text-8xl font-display font-black uppercase tracking-tighter leading-none mb-6">
+        <h1 className="text-5xl md:text-6xl font-display font-black uppercase tracking-tighter leading-none mb-6">
           Nexo<span className="text-color-orange underline decoration-8 underline-offset-12">Insights</span>
         </h1>
         <p className="text-xl md:text-2xl font-sans font-medium opacity-80 uppercase tracking-widest">

@@ -25,14 +25,14 @@ export function Layout() {
   };
 
   return (
-    <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
+    <div className="min-h-screen flex flex-col">
       <ScrollRestoration />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
       />
       <Header />
-      <main>
+      <main className="flex flex-col flex-1">
         <Outlet />
       </main>
       <Footer />
