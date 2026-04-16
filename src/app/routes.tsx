@@ -8,6 +8,8 @@ import { Contact } from "./pages/Contact";
 import { BlogIndex } from "./pages/BlogIndex";
 import { BlogDetail } from "./pages/BlogDetail";
 
+import { Privacy } from "./pages/Privacy";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -20,6 +22,7 @@ export const router = createBrowserRouter([
       { path: "contact", Component: Contact },
       { path: "blog", Component: BlogIndex },
       { path: "blog/:slug", Component: BlogDetail },
+      { path: "privacidad", Component: Privacy },
     ],
   },
 ]);

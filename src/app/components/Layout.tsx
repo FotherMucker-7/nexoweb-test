@@ -1,6 +1,7 @@
 import { Outlet, ScrollRestoration } from "react-router";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { CookieConsent } from "./ui/CookieConsent";
 
 export function Layout() {
   const organizationJsonLd = {
@@ -24,17 +25,18 @@ export function Layout() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
       <ScrollRestoration />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
       />
       <Header />
-      <main className="flex-1">
+      <main>
         <Outlet />
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   );
 }

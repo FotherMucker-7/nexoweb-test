@@ -132,7 +132,7 @@ export function Home() {
                 <div
                   key={i}
                   className={`border-4 border-foreground p-6 flex items-start gap-4 ${
-                    item.bad ? "bg-background" : "bg-[var(--color-lime)]"
+                    item.bad ? "bg-background" : "bg-[var(--color-lime)] text-black"
                   }`}
                   style={item.bad ? {} : { boxShadow: '6px 6px 0px 0px var(--shadow-solid)' }}
                 >
@@ -141,7 +141,7 @@ export function Home() {
                     <p className={`font-black uppercase text-sm mb-1 ${item.bad ? "line-through text-muted-foreground" : ""}`}>
                       {item.label}
                     </p>
-                    <p className="text-sm text-muted-foreground">{item.detail}</p>
+                    <p className={`text-sm ${item.bad ? "text-muted-foreground" : "text-black/70"}`}>{item.detail}</p>
                   </div>
                 </div>
               ))}
@@ -159,7 +159,7 @@ export function Home() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center bg-background border-4 border-foreground shadow-[12px_12px_0px_var(--color-magenta)] p-8 md:p-16">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-cyan)] border-2 border-foreground font-black uppercase text-sm">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-cyan)] border-2 border-foreground font-black uppercase text-sm text-black">
                 <Code className="w-4 h-4" /> Desarrollo Web a Medida
               </div>
               <h3 className="text-3xl md:text-5xl font-black leading-tight">
@@ -177,7 +177,7 @@ export function Home() {
                 "Diseño único basado en tu identidad",
                 "Adaptadas para todos los dispositivos"
               ].map((point, index) => (
-                <div key={index} className="flex items-center gap-4 p-4 border-4 border-foreground bg-accent hover:bg-[var(--color-lime)] transition-colors">
+                <div key={index} className="flex items-center gap-4 p-4 border-4 border-foreground bg-accent hover:bg-[var(--color-lime)] hover:text-black transition-colors">
                   <CheckCircle2 className="w-6 h-6 shrink-0" />
                   <span className="font-bold text-lg leading-tight w-full">{point}</span>
                 </div>

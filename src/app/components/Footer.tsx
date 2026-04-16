@@ -78,11 +78,17 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               © {currentYear} NexoWeb. Todos los derechos reservados.
             </p>
-            <div className="flex gap-6 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-foreground transition-colors">
+            <div className="flex flex-wrap gap-4 md:gap-6 text-sm text-muted-foreground justify-center md:justify-end">
+              <button 
+                onClick={() => window.dispatchEvent(new Event('open-cookie-settings'))}
+                className="hover:text-foreground transition-colors focus:outline-none focus-visible:underline"
+              >
+                Configuración de Cookies
+              </button>
+              <Link to="/privacidad" className="hover:text-foreground transition-colors focus:outline-none focus-visible:underline">
                 Privacidad
-              </a>
-              <a href="#" className="hover:text-foreground transition-colors">
+              </Link>
+              <a href="#" className="hover:text-foreground transition-colors focus:outline-none focus-visible:underline">
                 Términos
               </a>
             </div>

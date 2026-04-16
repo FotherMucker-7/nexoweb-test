@@ -419,7 +419,7 @@ export function Contact() {
                       />
                       <span className="text-sm text-muted-foreground leading-snug">
                         Acepto que NexoWeb use mis datos únicamente para responder a esta consulta, de acuerdo con su{" "}
-                        <a href="/privacy" className="font-black underline hover:text-[var(--color-cyan)] transition-colors">
+                        <a href="/privacidad" target="_blank" rel="noopener noreferrer" className="font-black underline hover:text-[var(--color-cyan)] transition-colors">
                           Política de Privacidad
                         </a>
                         .
