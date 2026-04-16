@@ -19,21 +19,23 @@ export function CookieConsent() {
 
   // Función para manejar la inserción de scripts cuando se acepta
   const enableAnalytics = () => {
-    // TODO: Inyectar aquí tu script de Google Analytics o el Pixel que uses.
-    // Ejemplo:
-    // if (!document.getElementById("ga-script")) {
-    //   const script = document.createElement("script");
-    //   script.id = "ga-script";
-    //   script.src = "https://www.googletagmanager.com/gtag/js?id=TU_ID";
-    //   script.async = true;
-    //   document.head.appendChild(script);
-    //
-    //   window.dataLayer = window.dataLayer || [];
-    //   function gtag(){dataLayer.push(arguments);}
-    //   gtag('js', new Date());
-    //   gtag('config', 'TU_ID');
-    // }
-    console.log("Analytics scripts enabled (placeholder)");
+    if (!document.getElementById("ga-script")) {
+      const script = document.createElement("script");
+      script.id = "ga-script";
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-54ZZSMT4MQ";
+      script.async = true;
+      document.head.appendChild(script);
+
+      // Usamos 'any' en window temporalmente para evitar que TypeScript se queje por dataLayer
+      const win = window as any;
+      win.dataLayer = win.dataLayer || [];
+      function gtag(...args: any[]) { win.dataLayer.push(arguments); }
+      win.gtag = gtag;
+
+      win.gtag('js', new Date());
+      win.gtag('config', 'G-54ZZSMT4MQ');
+    }
+    console.log("Analytics (G-54ZZSMT4MQ) activado");
   };
 
   const handleAccept = () => {
