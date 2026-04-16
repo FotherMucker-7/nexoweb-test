@@ -12,36 +12,34 @@ export function CookieConsent() {
       // Show immediately if no consent is found
       setIsVisible(true);
     } else if (consent === "accepted") {
-      // Si el usuario ya aceptó, inyectar/activar los scripts de Analytics
-      enableAnalytics();
+      // Si el usuario ya aceptó, inyectar GTM
+      enableTracking();
     }
   }, []);
 
-  // Función para manejar la inserción de scripts cuando se acepta
-  const enableAnalytics = () => {
-    if (!document.getElementById("ga-script")) {
-      const script = document.createElement("script");
-      script.id = "ga-script";
-      script.src = "https://www.googletagmanager.com/gtag/js?id=G-54ZZSMT4MQ";
-      script.async = true;
-      document.head.appendChild(script);
-
-      // Usamos 'any' en window temporalmente para evitar que TypeScript se queje por dataLayer
+  // Función para manejar la inserción de GTM cuando se acepta
+  const enableTracking = () => {
+    if (!document.getElementById("gtm-script")) {
       const win = window as any;
       win.dataLayer = win.dataLayer || [];
-      function gtag(...args: any[]) { win.dataLayer.push(arguments); }
-      win.gtag = gtag;
+      win.dataLayer.push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
 
-      win.gtag('js', new Date());
-      win.gtag('config', 'G-54ZZSMT4MQ');
+      const script = document.createElement("script");
+      script.id = "gtm-script";
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtm.js?id=GTM-M6LQH3NP`;
+      document.head.appendChild(script);
     }
-    console.log("Analytics (G-54ZZSMT4MQ) activado");
+    console.log("Google Tag Manager (GTM-M6LQH3NP) activado");
   };
 
   const handleAccept = () => {
     localStorage.setItem("nexoweb_cookie_consent", "accepted");
     setIsVisible(false);
-    enableAnalytics();
+    enableTracking();
   };
 
   const handleReject = () => {
