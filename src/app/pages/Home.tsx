@@ -92,6 +92,9 @@ export function Home() {
                 <ImageWithFallback
                   src={heroImg}
                   alt="Espacio de trabajo moderno - NexoWeb"
+                  width={800}
+                  height={1000}
+                  fetchPriority="high"
                   className="w-full h-full object-cover object-bottom drop-shadow-[12px_12px_0px_rgba(0,0,0,0.15)] transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
@@ -214,6 +217,9 @@ export function Home() {
                   <img 
                     src={post.heroImage} 
                     alt={post.title} 
+                    width={600}
+                    height={338}
+                    loading="lazy"
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
                 </div>

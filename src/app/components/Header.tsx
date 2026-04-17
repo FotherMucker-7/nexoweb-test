@@ -31,7 +31,10 @@ export function Header() {
           <Link to="/" className="relative group flex items-center gap-2">
             <img 
               src={logoImg} 
-              alt="Logo" 
+              alt="NexoWeb Logo" 
+              width={48}
+              height={48}
+              fetchPriority="high"
               className="w-12 h-12 object-contain transition-transform group-hover:scale-110 group-hover:rotate-5" 
             />
             <div className="text-3xl font-black tracking-tight hidden sm:block">

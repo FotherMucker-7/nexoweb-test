@@ -120,6 +120,9 @@ export function About() {
               <ImageWithFallback
                 src={manifestImg}
                 alt="Equipo NexoWeb trabajando"
+                width={800}
+                height={1000}
+                fetchPriority="high"
                 className="w-full h-full object-cover dark:brightness-90 drop-shadow-[12px_12px_0px_rgba(0,0,0,0.15)] transition-transform duration-500 group-hover:scale-105"
               />
             </div>

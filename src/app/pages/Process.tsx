@@ -214,6 +214,9 @@ export function Process() {
                     <ImageWithFallback
                       src={step.image}
                       alt={step.title}
+                      width={400}
+                      height={400}
+                      loading="lazy"
                       className="max-w-[85%] max-h-[280px] object-contain drop-shadow-[12px_12px_0px_rgba(0,0,0,0.15)] dark:brightness-90 transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2"
                     />
                   </div>

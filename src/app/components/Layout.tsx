@@ -1,7 +1,9 @@
 import { Outlet, ScrollRestoration } from "react-router";
+import { Suspense } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { CookieConsent } from "./ui/CookieConsent";
+import { PageLoader } from "./ui/PageLoader";
 
 export function Layout() {
   const organizationJsonLd = {
@@ -33,7 +35,9 @@ export function Layout() {
       />
       <Header />
       <main className="flex flex-col flex-1">
-        <Outlet />
+        <Suspense fallback={<PageLoader />}>
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
       <CookieConsent />

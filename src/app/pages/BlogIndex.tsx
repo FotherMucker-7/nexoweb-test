@@ -29,6 +29,9 @@ export const BlogIndex = () => {
               <img 
                 src={post.heroImage} 
                 alt={post.title} 
+                width={600}
+                height={338}
+                loading="lazy"
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
               />
             </div>
